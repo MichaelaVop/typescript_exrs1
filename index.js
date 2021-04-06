@@ -1,0 +1,13 @@
+import axios from 'axios';
+var url = 'http://jsonplaceholder.typicode.com/todos/1';
+axios.get(url).then(function (response) {
+    var todo = response.data;
+    var id = todo.id;
+    var title = todo.title;
+    var completed = todo.completed;
+    logTodo(id, title, completed);
+});
+var logTodo = function (id, title, completed) {
+    console.log("The Todo with ID: " + id + " \n        has a title of: " + title + " \n        is if finished? " + completed);
+};
+//# sourceMappingURL=index.js.map
